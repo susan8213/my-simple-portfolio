@@ -1,0 +1,38 @@
+name: Publish Gatsby Static Website to gh-pages
+on:
+  push:
+    branches: main
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    name: Build and deploy Gatsby site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+            
+      
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      
+      - name: Install Project Dependencies
+        run: npm ci
+      
+      - name: Install Gatsby CLI
+        run: npm install -g gatsby-cli@2.4.2
+      
+      - name: Build
+        run: gatsby build --prefix-paths
+      
+      - name: Verify build
+        run: ls -la public
+      
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: public # The folder the action should deploy.
+          branch: gh-pages
