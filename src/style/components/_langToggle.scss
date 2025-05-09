@@ -1,0 +1,51 @@
+$lang-toggle-height: 26px;
+$lang-toggle-width: 50px;
+$lang-toggle-knob-size: 20px;
+
+.lang-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: sans-serif;
+  user-select: none;
+
+  input {
+    display: none;
+  }
+
+  .slider {
+    width: $lang-toggle-width;
+    height: $lang-toggle-height;
+    background-color: #ccc;
+    border-radius: $lang-toggle-height / 2;
+    position: relative;
+    transition: background-color 0.2s;
+    margin-right: 8px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: $lang-toggle-knob-size;
+      width: $lang-toggle-knob-size;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: $secondary-color;
+
+    &::before {
+      transform: translateX(24px);
+    }
+  }
+
+  .label-text {
+    font-size: 14px;
+    color: #333;
+  }
+}

@@ -2,10 +2,11 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
+import LangToggle from '../LangToggle/LangToggle';
 import PortfolioContext from '../../context/context';
 
 const Header = () => {
-  const { hero } = useContext(PortfolioContext);
+  const { hero, handleLangChange } = useContext(PortfolioContext);
   const { title, name, subtitle, cta } = hero;
 
   const [isDesktop, setIsDesktop] = useState(false);
@@ -38,6 +39,9 @@ const Header = () => {
               <Link to="about" smooth duration={1000}>
                 {cta || 'Know more'}
               </Link>
+            </span>
+            <span>
+              <LangToggle onChange={handleLangChange} />
             </span>
           </p>
         </Fade>
