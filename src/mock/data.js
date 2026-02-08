@@ -29,6 +29,16 @@ const data = {
     projectsData: [
       {
         id: nanoid(),
+        img: 'health-ed-system.jpeg',
+        title: 'AI-Powered LINE Consultation & Patient Education Platform (2025)',
+        info:
+          'Built an AI consultation system on LINE for rural healthcare, cutting response time from 2.5 hours to 1 minute. Created a management platform for targeted health content delivery. Designed with visual tools for easy maintenance by non-technical users.',
+        info2: 'Next.js · MongoDB · n8n · Google Gemini API · LINE Messaging API',
+        url: 'https://health-ed-system.onrender.com',
+        repo: 'https://github.com/susan8213/health-ed-system',
+      },
+      {
+        id: nanoid(),
         img: 'my-awesome-portfolio.png',
         title: 'Personal Blog (2021)',
         info:
@@ -123,6 +133,16 @@ const data = {
       resume: 'https://joellyn.notion.site/Joellyn-1ef977b6a23080989fa1e6dcf2b8e3a9',
     },
     projectsData: [
+      {
+        id: nanoid(),
+        img: 'health-ed-system.jpeg',
+        title: 'AI問診 LINE BOT + 衛教管理平台 (2025)',
+        info:
+          '解決偏鄉醫療人力不足問題，開發 AI 智能助理自動處理病患問診，大幅提升回覆效率，同時建立衛教管理系統，讓醫師能針對不同症狀為偏鄉醫療團隊開發 LINE 智能問診助理，透過 AI 自動回覆將病患等待時間從 2.5 小時降至 1 分鐘。並建立衛教管理平台，讓醫師針對不同症狀精準推送健康資訊。系統採用n8n自動化工作流，方便非技術人員日常維護。',
+        info2: 'Next.js · MongoDB · n8n · Google Gemini API · LINE Messaging API',
+        url: 'https://health-ed-system.onrender.com',
+        repo: 'https://github.com/susan8213/health-ed-system',
+      },
       {
         id: nanoid(),
         img: 'my-awesome-portfolio.png',
